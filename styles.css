@@ -1,3 +1,4 @@
+
 /* General Reset */
 * {
     margin: 0;
@@ -40,8 +41,9 @@ main {
 
 .product-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    max-width: 1440px;
 }
 
 .product {
@@ -154,4 +156,491 @@ main {
     .navigation.active {
         display: block;
     }
+}
+/* Search Bar Styles */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+#search-bar {
+    padding: 8px;
+    width: 250px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#search-button {
+    padding: 8px 15px;
+    background-color: #FF6F00;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#search-button:hover {
+    background-color: purple;
+}
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body & Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+header {
+    background-color: #FF6F00; /* Orange */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+header .cart button {
+    background-color: purple;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+header .cart button:hover {
+    background-color: #9c27b0; /* Hover effect */
+}
+
+main {
+    padding: 20px;
+}
+
+/* Checkout Form */
+#checkout-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#checkout-form div {
+    margin-bottom: 15px;
+}
+
+#checkout-form label {
+    font-weight: bold;
+    color: #333;
+}
+
+#checkout-form input, #checkout-form select, #checkout-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#checkout-form input[type="text"],
+#checkout-form input[type="email"],
+#checkout-form select {
+    font-size: 1rem;
+}
+
+#checkout-form button {
+    background-color: #FF6F00;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+#checkout-form button:hover {
+    background-color: purple;
+}
+
+/* FAQ Page */
+.faq {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.faq-item h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Product Container - Grid Layout */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 products per row */
+    gap: 20px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.product {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    border-radius: 5px;
+}
+
+.product h3 {
+    margin-top: 10px;
+    color: #333;
+}
+
+.product p {
+    font-size: 1.1rem;
+    color: #FF6F00; /* Orange */
+    margin-top: 5px;
+}
+
+.add-to-cart, .view-detail {
+    background-color: #FF6F00; /* Orange */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+.add-to-cart:hover, .view-detail:hover {
+    background-color: purple;
+}
+
+/* Search Bar */
+.search-container {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto 20px;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Search Bar Styling */
+.search-container {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto 20px;
+}
+
+#search-input {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 25px; /* Rounded corners for the input field */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    background-color: #fff;
+}
+
+#search-input:focus {
+    border-color: #FF6F00; /* Highlight the border color when input is focused */
+    outline: none;
+}
+
+/* Suggestions Container */
+#search-suggestions {
+    position: absolute;
+    top: 100%; /* Position below the search bar */
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-top: none;
+    z-index: 10;
+    display: none; /* Hidden initially */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    max-height: 300px;
+    overflow-y: auto; /* Allow scrolling if suggestions exceed container size */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Suggestion Item Styling */
+.suggestion-item {
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease, padding-left 0.3s ease;
+    border-bottom: 1px solid #eee; /* Light border between suggestions */
+    border-radius: 8px; /* Rounded corners for each suggestion */
+}
+
+.suggestion-item:last-child {
+    border-bottom: none; /* Remove border from the last item */
+}
+
+.suggestion-item:hover {
+    background-color: #FF6F00; /* Highlight background color on hover */
+    color: white; /* Change text color to white */
+    padding-left: 30px; /* "Slide" effect for interactivity */
+}
+
+/* When search suggestions are visible */
+#search-suggestions.visible {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .search-container {
+        width: 90%;
+    }
+}
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: white;
+        width: 200px;
+        height: 100%;
+        padding-top: 20px;
+        border-left: 1px solid #ddd;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+    }
+
+    .navigation.active {
+        display: block;
+    }
+
+    /* Adjust product grid for mobile */
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Checkout form */
+    #checkout-form {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #FF6F00;
+    color: white;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Registration & Login Section */
+.register-section, .login-section {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkpurple;
+}
+
+ /* Off-Screen Menu Styles */
+ .off-screen-menu {
+    background-color: rgb(71, 6, 71);
+    background-image: url;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb(248, 245, 245);
+    height: 100vh;
+    width: 250px; /* Menu width */
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    right: -250px;  /* Initially off-screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    transition: right 0.3s ease; /* Smooth slide-in effect */
+    
+}
+
+/* When the menu is active (slid in) */
+.off-screen-menu.active {
+    right: 0;  /* Slide the menu into view */
+}
+
+.off-screen-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.off-screen-menu li {
+    margin: 20px 0;
+    display: block;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.off-screen-menu a {
+    color: rgb(8, 8, 8);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+/* Hamburger Menu Styles */
+.ham-menu {
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position: relative;
+    cursor: pointer;
+    z-index: 1000;  /* Ensures it stays on top */
+}
+
+.ham-menu span {
+    height: 5px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.ham-menu span:nth-child(1) {
+    top: 25%;
+}
+
+.ham-menu span:nth-child(2) {
+    top: 50%;
+}
+
+.ham-menu span:nth-child(3) {
+    top: 75%;
+}
+
+/* When the hamburger menu is active */
+.ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);  /* Rotate the top bar */
+}
+
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;  /* Hide the middle bar */
+}
+
+.ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, 50%) rotate(-45deg);  /* Rotate the bottom bar */
+}
+
+/* Make sure the header/nav is positioned correctly */
+nav {
+    padding: 1rem;
+    background-color: #444;
+    position: relative;
 }
