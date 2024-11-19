@@ -221,3 +221,134 @@ document.addEventListener('DOMContentLoaded', () => {
     populateCart(); // Display cart items when the page loads
     updateCartCount(); // Update cart count in the header
 });
+
+// Handle the registration form
+document.getElementById("register-form")?.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    // Store the user data (you can replace this with an API call to save the data on the server)
+    localStorage.setItem("user", JSON.stringify({ name, email, password }));
+
+    // Redirect to the login page after successful registration
+    alert("Registration Successful! Please log in.");
+    window.location.href = "login.html";
+});
+
+// Handle the login form
+document.getElementById("login-form")?.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    // Get user data from localStorage
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    // Check if the credentials match
+    if (user && user.email === email && user.password === password) {
+        alert("Login Successful!");
+        window.location.href = "cart.html";  // Redirect to the cart page after login
+    } else {
+        alert("Invalid credentials, please try again.");
+    }
+});
+
+// Cart checkout button logic
+document.getElementById("checkout-btn")?.addEventListener("click", function() {
+    const user = localStorage.getItem("user");
+    if (!user) {
+        window.location.href = "register.html";  // Redirect to register if not logged in
+    } else {
+        window.location.href = "checkout.html"; // Proceed to checkout if logged in
+    }
+});
+
+// Select the hamburger menu and off-screen menu
+const hamMenu = document.querySelector('.ham-menu');
+const offScreenMenu = document.querySelector('.off-screen-menu');
+
+// Toggle the menu when clicking on the hamburger menu
+hamMenu.addEventListener('click', (event) => {
+    event.stopPropagation(); // Prevent the event from bubbling up
+    hamMenu.classList.toggle('active');
+    offScreenMenu.classList.toggle('active');
+});
+
+// Close the menu if you click outside the menu
+document.addEventListener('click', (event) => {
+    if (!hamMenu.contains(event.target) && !offScreenMenu.contains(event.target)) {
+        hamMenu.classList.remove('active');
+        offScreenMenu.classList.remove('active');
+    }
+});
+
+document.getElementById("search-bar").addEventListener("input", function() {
+    const searchTerm = this.value.toLowerCase();
+    const products = document.querySelectorAll(".product");
+    const suggestionsContainer = document.getElementById("suggestions");
+    
+    // If there's no search term, hide the suggestions
+    if (searchTerm === "") {
+        suggestionsContainer.style.display = "none";
+        return;
+    }
+
+    const matchingProducts = [];
+
+    // Loop through products and collect the ones that match
+    products.forEach(product => {
+        const productName = product.querySelector("h3").textContent.toLowerCase();
+        if (productName.includes(searchTerm)) {
+            matchingProducts.push(productName);
+        }
+    });
+
+    // If no matching products, hide the suggestions
+    if (matchingProducts.length === 0) {
+        suggestionsContainer.style.display = "none";
+        return;
+    }
+
+    // Clear previous suggestions
+    suggestionsContainer.innerHTML = "";
+
+    // Display matching product names as suggestions
+    matchingProducts.forEach(name => {
+        const suggestionDiv = document.createElement("div");
+        suggestionDiv.textContent = name;
+        suggestionDiv.addEventListener("click", function() {
+            document.getElementById("search-bar").value = name; // Set the value to the clicked suggestion
+            suggestionsContainer.style.display = "none"; // Hide suggestions
+            filterProducts(name); // Filter products based on the suggestion
+        });
+        suggestionsContainer.appendChild(suggestionDiv);
+    });
+
+    // Show the suggestions container
+    suggestionsContainer.style.display = "block";
+});
+
+// Filter products based on the search input
+function filterProducts(searchTerm) {
+    const products = document.querySelectorAll(".product");
+    
+    products.forEach(product => {
+        const productName = product.querySelector("h3").textContent.toLowerCase();
+        if (productName.includes(searchTerm.toLowerCase())) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
+
+// Hide suggestions when clicking outside
+document.addEventListener("click", function(event) {
+    if (!event.target.closest(".search-container")) {
+        document.getElementById("suggestions").style.display = "none";
+    }
+});
