@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tsavo - Electronics Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hamburger Menu -->
+    <div class="hamburger-menu" id="hamburger-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navigation" id="nav-links">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>Tsavo</h1>
+        </div>
+        <div class="cart">
+            <button id="cart-button">
+                Cart <span id="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="product-container">
+            <!-- Product 1 -->
+            <div class="product" data-id="1">
+                <img src="img/laptop.png" alt="Laptop">
+                <h3>Laptop</h3>
+                <p>KSh 100,000</p>
+                <button class="add-to-cart" data-id="1" data-name="Laptop" data-price="100000">Add to Cart</button>
+            </div>
+            <!-- Product 2 -->
+            <div class="product" data-id="2">
+                <img src="img/smartphone.avif" alt="Smartphone">
+                <h3>Smartphone</h3>
+                <p>KSh 70,000</p>
+                <button class="add-to-cart" data-id="2" data-name="Smartphone" data-price="70000">Add to Cart</button>
+            </div>
+            <!-- Product 3 -->
+            <div class="product" data-id="3">
+                <img src="img/ear1.png" alt="Earbuds">
+                <h3>Wireless Earbuds</h3>
+                <p>KSh 15,000</p>
+                <button class="add-to-cart" data-id="3" data-name="Wireless Earbuds" data-price="15000">Add to Cart</button>
+            </div>
+            <!-- Product 4 -->
+            <div class="product" data-id="4">
+                <img src="img/smartwatch (1).png" alt="Smartwatch">
+                <h3>Smartwatch</h3>
+                <p>KSh 20,000</p>
+                <button class="add-to-cart" data-id="4" data-name="Smartwatch" data-price="20000">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Tsavo Electronics Store</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
