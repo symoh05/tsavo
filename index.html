@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tsavo - Electronics Store</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style1.css">
 </head>
 <body>
     <!-- Hamburger Menu -->
@@ -14,14 +14,28 @@
         <span></span>
     </div>
 
-    <!-- Navigation -->
-    <nav class="navigation" id="nav-links">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="cart.html">Cart</a></li>
-        </ul>
-    </nav>
+    <nav>
+        <!-- Hamburger Menu -->
+        <div class="ham-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
+        <!-- Off-Screen Menu (Initially hidden) -->
+        <div class="off-screen-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="contact-us.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="product-details.html">Product-details</a></li>
+                <li><a href="return-policy.html">Return-policy</a></li>
+                <li><a href="privacy-policy.html">Privacy-policy</a></li>
+                <li><a href="register.html">Register Here</a></li>
+            </ul>
+        </div>
+    </nav>
     <!-- Header -->
     <header>
         <div class="logo">
@@ -33,6 +47,13 @@
             </button>
         </div>
     </header>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search products...">
+        <button id="search-button">Search</button>
+        <div id="suggestions" class="suggestions-container"></div> <!-- Suggestions container -->
+    </div>
 
     <!-- Main Content -->
     <main>
@@ -46,7 +67,7 @@
             </div>
             <!-- Product 2 -->
             <div class="product" data-id="2">
-                <img src="img/smartphone.avif" alt="Smartphone">
+                <img src="img/smartphone.jpg" alt="Smartphone">
                 <h3>Smartphone</h3>
                 <p>KSh 70,000</p>
                 <button class="add-to-cart" data-id="2" data-name="Smartphone" data-price="70000">Add to Cart</button>
@@ -65,6 +86,73 @@
                 <p>KSh 20,000</p>
                 <button class="add-to-cart" data-id="4" data-name="Smartwatch" data-price="20000">Add to Cart</button>
             </div>
+            <!-- New Products (10 more added) -->
+            <div class="product" data-id="5">
+                <img src="img/headphones.jpg" alt="Headphones">
+                <h3>Noise Cancelling Headphones</h3>
+                <p>KSh 25,000</p>
+                <button class="add-to-cart" data-id="5" data-name="Noise Cancelling Headphones" data-price="25000">Add to Cart</button>
+            </div>
+            <div class="product" data-id="6">
+                <img src="img/tablet.jpg" alt="Tablet">
+                <h3>Tablet</h3>
+                <p>KSh 40,000</p>
+                <button class="add-to-cart" data-id="6" data-name="Tablet" data-price="40000">Add to Cart</button>
+            </div>
+            <div class="product" data-id="7">
+                <img src="img/smart speaker.jpg" alt="Smart Speaker">
+                <h3>Smart Speaker</h3>
+                <p>KSh 10,000</p>
+                <button class="add-to-cart" data-id="7" data-name="Smart Speaker" data-price="10000">Add to Cart</button>
+            </div>
+            <div class="product" data-id="8">
+                <img src="img/phone case.jpg" alt="Smartphone Case">
+                <h3>Smartphone Case</h3>
+                <p>KSh 1,000</p>
+                <button class="add-to-cart" data-id="8" data-name="Smartphone Case" data-price="1000">Add to Cart</button>
+            </div>
+            <div class="product" data-id="9">
+                <img src="img/monitor.jpg" alt="Monitor">
+                <h3>Computer Monitor</h3>
+                <p>KSh 30,000</p>
+                <button class="add-to-cart" data-id="9" data-name="Computer Monitor" data-price="30000">Add to Cart</button>
+            </div>
+            <div class="product" data-id="10">
+                <img src="img/mechanical keyboard.jpg" alt="Keyboard">
+                <h3>Mechanical Keyboard</h3>
+                <p>KSh 5,000</p>
+                <button class="add-to-cart" data-id="10" data-name="Mechanical Keyboard" data-price="5000">Add to Cart</button>
+            </div>
+            <div class="product" data-id="11">
+                <img src="img/wireless mouse.webp" alt="Mouse">
+                <h3>Wireless Mouse</h3>
+                <p>KSh 2,500</p>
+                <button class="add-to-cart" data-id="11" data-name="Wireless Mouse" data-price="2500">Add to Cart</button>
+            </div>
+            <div class="product" data-id="12">
+                <img src="img/printer.jpg" alt="Printer">
+                <h3>Inkjet Printer</h3>
+                <p>KSh 15,000</p>
+                <button class="add-to-cart" data-id="12" data-name="Inkjet Printer" data-price="15000">Add to Cart</button>
+            </div>
+            <div class="product" data-id="13">
+                <img src="img/charger.jpg" alt="Charger">
+                <h3>Fast Charger</h3>
+                <p>KSh 1,500</p>
+                <button class="add-to-cart" data-id="13" data-name="Fast Charger" data-price="1500">Add to Cart</button>
+            </div>
+            <div class="product" data-id="14">
+                <img src="img/docking station.jpg" alt="Docking Station">
+                <h3>Docking Station</h3>
+                <p>KSh 8,000</p>
+                <button class="add-to-cart" data-id="14" data-name="Docking Station" data-price="8000">Add to Cart</button>
+            </div>
+            <div class="product" data-id="15">
+                <img src="img/smart glasses.jpg" alt="Smart Glasses">
+                <h3>Smart Glasses</h3>
+                <p>KSh 35,000</p>
+                <button class="add-to-cart" data-id="15" data-name="Smart Glasses" data-price="35000">Add to Cart</button>
+            </div>
         </section>
     </main>
 
@@ -74,5 +162,75 @@
     </footer>
 
     <script src="scripts.js"></script>
+
+    <!-- JavaScript for Search Bar with Suggestions -->
+    <script>
+        document.getElementById("search-bar").addEventListener("input", function() {
+            const searchTerm = this.value.toLowerCase();
+            const products = document.querySelectorAll(".product");
+            const suggestionsContainer = document.getElementById("suggestions");
+            
+            // If there's no search term, hide the suggestions
+            if (searchTerm === "") {
+                suggestionsContainer.style.display = "none";
+                return;
+            }
+
+            const matchingProducts = [];
+
+            // Loop through products and collect the ones that match
+            products.forEach(product => {
+                const productName = product.querySelector("h3").textContent.toLowerCase();
+                if (productName.includes(searchTerm)) {
+                    matchingProducts.push(productName);
+                }
+            });
+
+            // If no matching products, hide the suggestions
+            if (matchingProducts.length === 0) {
+                suggestionsContainer.style.display = "none";
+                return;
+            }
+
+            // Clear previous suggestions
+            suggestionsContainer.innerHTML = "";
+
+            // Display matching product names as suggestions
+            matchingProducts.forEach(name => {
+                const suggestionDiv = document.createElement("div");
+                suggestionDiv.textContent = name;
+                suggestionDiv.addEventListener("click", function() {
+                    document.getElementById("search-bar").value = name; // Set the value to the clicked suggestion
+                    suggestionsContainer.style.display = "none"; // Hide suggestions
+                    filterProducts(name); // Filter products based on the suggestion
+                });
+                suggestionsContainer.appendChild(suggestionDiv);
+            });
+
+            // Show the suggestions container
+            suggestionsContainer.style.display = "block";
+        });
+
+        // Filter products based on the search input
+        function filterProducts(searchTerm) {
+            const products = document.querySelectorAll(".product");
+            
+            products.forEach(product => {
+                const productName = product.querySelector("h3").textContent.toLowerCase();
+                if (productName.includes(searchTerm.toLowerCase())) {
+                    product.style.display = "block";
+                } else {
+                    product.style.display = "none";
+                }
+            });
+        }
+
+        // Hide suggestions when clicking outside
+        document.addEventListener("click", function(event) {
+            if (!event.target.closest(".search-container")) {
+                document.getElementById("suggestions").style.display = "none";
+            }
+        });
+    </script>
 </body>
 </html>
