@@ -79,7 +79,7 @@ header .cart button {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
     max-height: 300px;
     overflow-y: auto; /* Allow scrolling if suggestions exceed container size */
-    opacity: 0;
+    opacity: 100%;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
