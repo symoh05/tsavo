@@ -70,7 +70,7 @@ header .cart button {
     top: 100%; /* Position below the search bar */
     left: 0;
     width: 100%;
-    background-color: #fff;
+    background-color: purple;
     border: 2px solid #ddd;
     border-top: none;
     z-index: 10;
